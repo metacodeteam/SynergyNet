@@ -11,7 +11,7 @@ import sys
 from dataset import * 
 from torch.utils.data import DataLoader
 from metrics import compute_cls_metrics, compute_reg_metrics
-from vox_model import * 
+from dds_model import * 
 from dgllife.utils import EarlyStopping, Meter,RandomSplitter
 from prettytable import PrettyTable
 from tqdm import tqdm 
