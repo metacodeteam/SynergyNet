@@ -6,7 +6,7 @@ import os
 
 
 # Load Gene Attribute Matrix
-gene_attribute_matrix = pd.read_table('/home/wjj/data/drugsyn/gene_attribute_matrix_standardized.txt', header=[0,1], index_col=[0,1])
+gene_attribute_matrix = pd.read_table('/gene_attribute_matrix_standardized.txt', header=[0,1], index_col=[0,1])
 # Drop un-needed indexes/headers
 gene_attribute_matrix.index = gene_attribute_matrix.index.droplevel(1)
 gene_attribute_matrix.columns = gene_attribute_matrix.columns.droplevel(1)
@@ -19,9 +19,9 @@ gene_attribute_matrix.drop(gene_attribute_matrix.columns[0], axis=1, inplace=Tru
 print(gene_attribute_matrix.head())
 
 
-# sc_gene_exp_file =   "/home/wjj/data/drugsyn/cell_line_Gene_expression_CCLE.csv"
-cell2id1 =  pd.read_csv('../NEXGB/data/DrugComb/cell_id.csv', header=None, names=['cell', 'id'])
-cell2id2 =  pd.read_csv('../NEXGB/data/OncologyScreen/cell_id.csv', header=None, names=['cell', 'id'])
+# sc_gene_exp_file =   "/cell_line_Gene_expression_CCLE.csv"
+cell2id1 =  pd.read_csv('./data/DrugComb/cell_id.csv', header=None, names=['cell', 'id'])
+cell2id2 =  pd.read_csv('./data/OncologyScreen/cell_id.csv', header=None, names=['cell', 'id'])
 cell2id1 = dict(zip(cell2id1['cell'],  cell2id1['id'] ))
 cell2id2 = dict(zip(cell2id2['cell'],  cell2id2['id'] ))
 
