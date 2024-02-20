@@ -9,7 +9,7 @@ headers={
 requests.adapters.DEFAULT_RETRIES = 100
 
 
-with open('../NEXGB/data/DrugComb/drug_id.csv', 'r') as f:
+with open('./data/DrugComb/drug_id.csv', 'r') as f:
     for s in f:
         ss = requests.session()
         ss.keep_alive = False
