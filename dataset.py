@@ -25,7 +25,6 @@ import dgl
 
 class DrugComBVoxDataset(Dataset):
     def __init__(self, drug1s, drug2s, celllines, labels, drug2vox, molfeatures, cellfeatures, cell_gene):
-        #     # 即drug1s, drug2s, celllines, labels,drug的vox embedding，drug的ppi embedding（疑似模型的参数），cell的ppi embedding，cell_gene data
          
         self.labels =  labels 
         self.length = len(self.labels)
