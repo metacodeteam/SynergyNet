@@ -6,7 +6,7 @@ import os
 
 
 # Load Gene Attribute Matrix
-gene_attribute_matrix = pd.read_table('/home/wjj/data/drugsyn/gene_attribute_matrix_standardized.txt', header=[0,1], index_col=[0,1])
+gene_attribute_matrix = pd.read_table('/gene_attribute_matrix_standardized.txt', header=[0,1], index_col=[0,1])
 # Drop un-needed indexes/headers
 gene_attribute_matrix.index = gene_attribute_matrix.index.droplevel(1)
 gene_attribute_matrix.columns = gene_attribute_matrix.columns.droplevel(1)
@@ -19,7 +19,7 @@ gene_attribute_matrix.drop(gene_attribute_matrix.columns[0], axis=1, inplace=Tru
 print(gene_attribute_matrix.head())
 
      
-cline_feature_file = 'Data/ALMANAC-COSMIC/cell line_gene_expression.csv'
+cline_feature_file = '/cell line_gene_expression.csv'
 gene_data = pd.read_csv(cline_feature_file, sep=',', header=0, index_col=[0])
 
  
