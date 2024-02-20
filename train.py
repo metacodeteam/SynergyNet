@@ -333,9 +333,7 @@ if __name__ == '__main__':
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     BATCH_SIZE = 2
     synergy,  drug2vox, mol_features, cell_features, cell_gene = get_data(dataset_name)
-    # drug的协同作用info，drug的vox embedding，drug的ppi embedding（疑似模型的参数），cell的ppi embedding，cell_gene data
-    # drug的协同作用indo包括drug1s, drug2s, celllines, labels,
-    # 即drug1s, drug2s, celllines, labels,drug的vox embedding，drug的ppi embedding（疑似模型的参数），cell的ppi embedding，cell_gene data
+
     seed = 42
     seed_everything(seed)
 
