@@ -330,7 +330,7 @@ class DDS3DSMILESDescriptorNetV3(nn.Module):
         # self.bifusion = nn.Bilinear(hidden_size*3, hidden_size*3, hidden_size*3)
         # self.bn = nn.BatchNorm1d(hidden_size)
 
-    '''!!!TODO 搞三个函数，一个vox，一个ppi，一个融合 '''
+
 
     def forward(self,    d1, d2,  x_vox1, x_vox2,  celllines, cell_g):
         # ppi1，ppi2，vox1，vox2，celllines，cg
